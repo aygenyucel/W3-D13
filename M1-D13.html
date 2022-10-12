@@ -18,7 +18,6 @@ The user should be able to see the list of tasks, add new ones, delete existing 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <title>TASK LIST WEBSITE</title>
     <style>
       /* EXERCISE 2:  
@@ -26,6 +25,18 @@ The user should be able to see the list of tasks, add new ones, delete existing 
        Create a CSS class for the task list item with a border, a bold text and a bigger font size
        Style every button of the page to be bigger
     */
+      #myTaskList {
+        background-color: aquamarine;
+      }
+      li {
+        border: 2px solid black;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      button {
+        width: 80px;
+        height: 40px;
+      }
     </style>
   </head>
 
@@ -125,13 +136,13 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       const getTasksAsArray = function () {
         const allTasks = document.getElementsByTagName("li");
 
-        const taskArr = [];
+        let taskArr = [];
 
         for (task of allTasks) {
           taskArr.push(task.innerText);
         }
 
-        console.log(taskArr);
+        console.log(typeof taskArr);
         return taskArr;
       };
 
